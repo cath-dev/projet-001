@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>titre 1</h1>
+    <p>Mon premier paragraphe.</p>  
+    <div>X</div>
+    <!-- Cree un jeu de mort pion -->
+    <div id="jeu"></div>
+    <script>
+        // On cree un tableau de 9 cases
+        let jeu = new Array(9);
+        // On cree une boucle pour remplir le tableau
+        for (let i = 0; i < jeu.length; i++) {
+            // On cree un element div
+            let div = document.createElement("div");
+            // On ajoute la classe case
+            div.classList.add("case");
+            // On ajoute un id
+            div.id = "case" + i;
+            // On ajoute un event listener
+            div.addEventListener("click", function() {
+                // On ajoute un X
+                div.innerHTML = "X";
+                // On ajoute la classe X
+                div.classList.add("X");
+                // On retire l'event listener
+                div.removeEventListener("click", arguments.callee);
+            });
+            // On ajoute le div au jeu
+            document.getElementById("jeu").appendChild(div);
+        }
+    </script>
+    <style>
+        .case {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            display: inline-block;
+            text-align: center;
+            line-height: 100px;
+        }
+        .X {
+            color: red;
+        }
+    </style>
+</body>
+</html>
