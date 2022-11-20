@@ -1,0 +1,22 @@
+{
+  "name": "projet-001",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mortpion.js",
+  "scripts": {
+    "start:dev": "http-server --port 8080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cath-dev/projet-001.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cath-dev/projet-001/issues"
+  },
+  "homepage": "https://github.com/cath-dev/projet-001#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
